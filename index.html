@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Commitment Decision Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Commitment Decision Engine</h1>
+
+    <p class="subtitle">
+      Evaluate cloud commitment strategies by balancing savings, risk, and forecast uncertainty.
+    </p>
+
+    <!-- INPUT SECTION -->
+    <div class="card">
+      <h2>Inputs</h2>
+
+      <label>Baseline Monthly Usage ($)</label>
+      <input type="number" id="baseline" value="100000">
+
+      <label>Peak Monthly Usage ($)</label>
+      <input type="number" id="peak" value="140000">
+
+      <label>On-Demand Monthly Cost ($)</label>
+      <input type="number" id="ondemand" value="120000">
+
+      <label>Savings Plan Discount (%)</label>
+      <input type="number" id="spDiscount" value="30">
+
+      <label>Reserved Instance Discount (%)</label>
+      <input type="number" id="riDiscount" value="40">
+
+      <label>Forecast Growth (%)</label>
+      <input type="number" id="growth" value="10">
+
+      <label>Demand Volatility (%)</label>
+      <input type="number" id="volatility" value="15">
+
+      <button onclick="runEngine()">Run Decision Engine</button>
+    </div>
+
+    <!-- OUTPUT SECTION -->
+    <div class="card output">
+      <h2>Recommendation</h2>
+
+      <p><strong>Strategy:</strong> <span id="strategy">-</span></p>
+      <p><strong>Coverage:</strong> <span id="coverage">-</span></p>
+      <p><strong>Projected Savings:</strong> <span id="savings">-</span></p>
+      <p><strong>Risk Exposure:</strong> <span id="risk">-</span></p>
+      <p><strong>Confidence:</strong> <span id="confidence">-</span></p>
+
+      <p class="rationale">
+        <strong>Rationale:</strong><br>
+        <span id="rationale">-</span>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
